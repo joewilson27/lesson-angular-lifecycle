@@ -1,0 +1,10 @@
+<h1>Parent Component</h1>
+
+<button (click)="toggleChild()">Toggle Child</button>
+
+<input type="text" [(ngModel)]="channelName" />
+
+<app-child *ngIf="isChild" [channelName]="channelName">
+    <h2 #projectedContent>Please subscribe to https://github.com/joewilson27</h2>
+    <!-- di child component tambahkan <ng-content></ng-content> agar tag di atas muncul di child component -->
+</app-child>

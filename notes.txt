@@ -1,0 +1,19 @@
+Components and Directives have Lifecycle Hooks
+Components have more Lifecycle Hooks than Directives
+
+Lifecycle Hooks for both Components & Directives:
+ngOnInit, ngOnChanges, ngDoCheck, ngDestroy
+
+Lifecycle Hooks for Components (only):
+ngAfterContentInit, ngAfterContentChecked, ngAfterViewInit, ngAfterViewChecked
+
+Summary:
+ngOnInit => Once component is loaded into the DOM, that component's constructor and ngOnInit method will be called
+ngOnDestroy => will be called once just BEFORE the component is removed from the DOM, in other words when the component is destroyed from the DOM
+ngOnChanges => will be called once before OnInit and will be called whenever the data-bound input properties changes.
+ngDoCheck => will be invoked when the change detector of the given component invoked
+
+ngAfterContentInit => will be called ONLY once after the first DoCheck
+ngAfterContentChecked => will be called after AfterContentInit
+ngAfterViewInit => will be called once after the first ngAfterContentChecked
+ngAfterViewChecked => will be called once after ngAfterViewInit and every subsequent ngAfterContentChecked
